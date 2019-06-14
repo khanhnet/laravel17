@@ -12,6 +12,17 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('posts/{id}', 'HomeController@posts')->name('posts');
-Route::get('detail/{id}', 'HomeController@detail')->name('detail');
+Route::get('categore/{slug}', 'HomeController@posts')->name('posts');
+Route::get('/tag/{slug}', 'HomeController@tags')->name('tag');
+Route::get('detail/{slug}', 'HomeController@detail')->name('detail');
 
+
+
+Route::prefix('admin')->group(function(){
+Auth::routes();
+Route::middleware(['auth:web'])->group(function(){
+Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::get('/listPosts', 'HomeController@listPosts')->name('listposts');
+Route::get('/getListPosts', 'HomeController@getListPosts')->name('listposts');
+});
+});

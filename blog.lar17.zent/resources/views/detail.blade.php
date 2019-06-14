@@ -14,9 +14,9 @@
                 <div class="post-image">
                     <img src="{{$post->thumbnail}}" alt="post image 1"> 
                 </div>
-                <!-- <div class="category">
-                    <a href="#">Travel</a>
-                </div> -->
+                 <div class="category">
+                    <a href="{{ route('posts',$post->category->slug) }}">Travel</a>
+                </div> 
                 <div class="post-text">
                     <span class="date">{{$post->created_at}}</span>
                     <h2>{{$post->title}}</h2>

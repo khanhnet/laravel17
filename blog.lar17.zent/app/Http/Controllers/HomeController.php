@@ -8,28 +8,33 @@ use App\Category;
 
 class HomeController extends Controller
 {
-    public function index(){
-    	$posts  = Post::paginate(5);
-    	
-    	
-
-
-    	 // lấy tất cả bài viết trong bảng.
-// return View với dữ liệu đã lấy đượcđược truyền qua view bằng biến posts.
-    	return view('home',compact('posts'));
-    }
-    public function posts($id){
-    	$posts = Category::find($id)->posts()->paginate(5);
-    	//dd($posts);
-        return view('posts',compact('posts','id'));
-    	
-    	
-    }
-    public function detail($id){
-    	$post  = Post::find($id);
-    	
-    	return view('detail',compact('post'));
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('admin/dashboard');
+    }
+    public function listPosts()
+    {
+        return view('admin/listposts');
+    }
+    public function getListPosts()
+    {
+        return view('admin/listposts');
+    }
+    
 
 }

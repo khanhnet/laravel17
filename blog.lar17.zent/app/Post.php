@@ -19,6 +19,11 @@ class Post extends Model
         ]; // một mảng tên các cột trong bảng posts ở database
         // không cần thêm các cột như id, created_at, updated_at, deleted_at vào
 
+        public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
          
 
 

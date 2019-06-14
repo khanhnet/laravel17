@@ -40,7 +40,7 @@
 
     	<!-- LOGO -->    
     	<div class="logo-container">
-           <a href="index.html"><img src="{{ asset('blog_assets/img/logo.png')}}" alt="logo" ></a>
+           <a href="/"><img src="{{ asset('blog_assets/img/logo.png')}}" alt="logo" ></a>
            <div class="tada-social">
                <a href="#"><i class="icon-facebook5"></i></a>
                <a href="#"><i class="icon-twitter4"></i></a>
@@ -57,11 +57,11 @@
         <ul class="tada-menu">
             @foreach($categories as $category)
             @if($category->parent_id==null)
-            <li><a href="{{ route('posts',$category->id) }}" class="active">{{$category->name}}<i class="icon-arrow-down8"></i></a>
+            <li><a href="{{ route('posts',$category->slug) }}" class="active">{{$category->name}}<i class="icon-arrow-down8"></i></a>
                 <ul class="submenu">
                     @foreach($categories as $cate)
                     @if($cate->parent_id==$category->id)
-                    <li><a href="{{ route('posts',$cate->id) }}">{{$cate->name}}</a></li>
+                    <li><a href="{{ route('posts',$cate->slug) }}">{{$cate->name}}</a></li>
                     @endif
                     @endforeach
 
