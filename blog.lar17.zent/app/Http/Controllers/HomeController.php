@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\Category;
 
 class HomeController extends Controller
 {
@@ -21,20 +19,10 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('admin/dashboard');
+        return view('home');
     }
-    public function listPosts()
-    {
-        return view('admin/listposts');
-    }
-    public function getListPosts()
-    {
-        return view('admin/listposts');
-    }
-    
-
 }
