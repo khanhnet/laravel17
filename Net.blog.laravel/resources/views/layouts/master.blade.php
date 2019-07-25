@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>xemchua</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,6 +17,10 @@
     ================================================== -->
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('blog_assets/css/base.css')}}">
@@ -49,7 +53,7 @@
 
                 <div class="header__logo">
                     <a class="logo" href="/">
-                       <h1 style="font-family: 'Kaushan Script', cursive;color: #fafafa">DEMO</h1>
+                       <h1 style="font-family: 'Kaushan Script', cursive;color: #fafafa">Xemchua</h1>
                     </a>
                 </div> <!-- end header__logo -->
 
@@ -196,7 +200,7 @@
                     </div>
 
                     <div class="go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                        <a class="smoothscroll fa fa-arrow-up" title="Back to Top" href="#top"></a>
                     </div>
                 </div>
             </div>
@@ -225,6 +229,7 @@
     <script src="{{ asset('blog_assets/js/plugins.js') }}"></script>
     <script src="{{ asset('blog_assets/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.3.7/jquery.jscroll.js"></script>
     <script >
         $(document).ready(function($) {
     var engine1 = new Bloodhound({

@@ -51,9 +51,8 @@
                             </div> <!-- end entry__content -->
                           
                         </div> <!-- end entry -->
-
-                        <div class="entry" style="background-image:url('{{$lastest_posts[2]->thumbnail}}');">
-
+                         <div class="entry" style="background-image:url('{{$lastest_posts[2]->thumbnail}}');">
+                            
                             <div class="entry__content">
                                 <span class="entry__category"><a href="/category/{{$lastest_posts[2]->category->slug}}">{{$lastest_posts[2]->category->name}}</a></span>
 
@@ -70,8 +69,10 @@
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
-
+                          
                         </div> <!-- end entry -->
+
+                       
 
                     </div> <!-- end featured__small -->
                 </div> <!-- end featured -->
@@ -85,7 +86,7 @@
 <section class="s-content">
 
 <div class="row masonry-wrap">
-            <div class="masonry">
+            <div class="masonry ">
 
                 <div class="grid-sizer"></div>
 
@@ -94,7 +95,7 @@
                 <span style="display: none;">{{$dem++}}</span>
                  @if($dem>3)
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard " data-aos="fade-up">
                         
                     <div class="entry__thumb">
                         <a href="/blog/{{$post->slug}}" class="entry__thumb-link">

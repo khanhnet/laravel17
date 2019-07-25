@@ -17,7 +17,10 @@ class PostController extends Controller
 	{
 		$dem=0;
 		$posts = Post::orderBy('id','desc')->paginate(12);
-		$lastest_posts = Post::orderBy('id','desc')->limit(3)->get();
+		$lastest_posts = Post::orderBy('id','desc')->limit(4)->get();
+		
+		
+		//dd($lastest_posts);
 		
 		
 		return view('posts.index',['dem' => $dem,'posts' => $posts,'lastest_posts'=>$lastest_posts]);
@@ -27,7 +30,6 @@ class PostController extends Controller
 	{
 
 		$post = Post::where('slug',$slug)->FirstOrFail();
-		//$post->increment('views');
 		$post->increment('view_count');
 
 		$user = \App\User::where('id',$post->user_id)->FirstOrFail();
@@ -75,6 +77,8 @@ public function searchAll()
 
     return view('search',['search' => $search,'scategories' => $scategories,'stags' => $stags,'sposts' => $sposts]);
 }
+
+
 
 
 

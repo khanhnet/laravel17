@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::get('/','PostController@index');
 
 Route::get('blog/{slug}','PostController@detail');

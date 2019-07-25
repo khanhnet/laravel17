@@ -11,7 +11,7 @@ class Post extends Model
 
 	protected $dates = ['created_at'];
 
-	protected $fillable = [ 'title', 'thumbnail', 'description', 'content', 'slug', 'user_id', 'category_id', 'view_count' ];
+	protected $fillable = [ 'title', 'thumbnail', 'description', 'content','slug', 'user_id', 'category_id', 'view_count' ];
 
 	public function category(){
       return $this->belongsTo('\App\Category', 'category_id');
